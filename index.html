@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<!-- ボタンCSSの参照先 http://www.htmq.com/csskihon/004.shtml -->
+	<style type="text/css">
+		.square_btn{
+			display: inline-block;
+			padding: 0.5em 1em;
+			text-decoration: none;
+			background: #11FFFF;/*ボタン色*/
+			color: #FFF;
+			border-bottom: solid 4px #008BBB;
+			border-radius: 3px;
+		}
+		.square_btn:active {/*ボタンを押したとき*/
+			-ms-transform: translateY(4px);
+			-webkit-transform: translateY(4px);
+			transform: translateY(4px);/*下に動く*/
+			border-bottom: none;/*線を消す*/
+		}
+	</style>
+	<script src="gacha.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.css' />  
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/lity/1.6.6/lity.js'></script>
+
+
+	<title>JavaScriptサンプル</title>
+</head>
+<body>
+<h1>JavaScriptガチャ</h1>
+
+
+
+<div><img id="card" src="unknown.png" width="300" height="400"></div>
+
+<div><a id="cord" data-lity="data-lity" class="square_btn" onclick="gatcha()">ガチャを引く！</a></div>
+
+<dl>
+	<dt>現在の課金額</dt>
+	<dd id="price">0円</dd>
+	<dt>レアの枚数（設定確率は90％）</dt>
+	<dd id="no_rare">0枚</dd>
+	<dt>ＳＲの枚数（設定確率は9％）</dt>
+	<dd id="no_srare">0枚</dd>
+	<dt>ＵＲの枚数（設定確率は1％）</dt>
+	<dd id="no_urare">0枚</dd>
+</dl>
+
+</body>
+</html>
+
